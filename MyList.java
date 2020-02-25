@@ -3,7 +3,10 @@ package sk.itsovy.podhajecka.Linear;
 public class MyList {
     private Node head;
 
-    public MyList(Node head) {
+    public Node getHead() {
+        return head;
+    }
+    public MyList() {
         this.head = null;
     }
     public void addToFront(Node node) {
@@ -19,6 +22,8 @@ public class MyList {
     public void addToEnd(Node node){
         if (node == null)
             return;
+        if (head == null)
+            head = node;
         Node temp = head;
         while (temp.getNext() != null) {
             temp = temp.getNext();
@@ -44,7 +49,7 @@ public class MyList {
     public int getSize(){
         int size = 0;
         Node temp = head;
-        while (temp.getNext() != null) {
+        while (temp!= null) {
             size ++;
             temp = temp.getNext();
         }
@@ -86,7 +91,6 @@ public class MyList {
             System.out.println("Linear list is empty");
             return null;
         }
-
         Node temp = head;
         if (!(temp.getName() instanceof String ))
             return null;

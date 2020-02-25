@@ -3,7 +3,7 @@ package sk.itsovy.podhajecka.Linear;
 public class Main {
 
     public static void main(String[] args){
-        MyList m = new MyList(new Node<String>("aaa"));
+        MyList m = new MyList();
         m.addToFront(new Node<String>("A"));
         m.addToFront(new Node<String>("b"));
         m.addToFront(new Node<String>("c"));
